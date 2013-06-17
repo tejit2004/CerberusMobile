@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><title>Cerberus Networks - Check EFM Availability</title></title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+    <script src="jquery/jquery-1.9.1.min.js"></script>    
+    <script src="jquery/jquery.mobile-1.3.1.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="js/check_availability.js"></script>
+    
+    <style>
+        .ui-block-a
+		{
+			width:40%;
+		}        
+		.ui-block-b
+		{
+			width:60%;
+		}        
+    </style>
+</head>
+<body>
+    
+    <div data-role="page" id="efm_availability" >
+        <div data-theme="a" data-role="header" data-position="fixed">
+            <a data-role="button" data-rel="back" data-icon="arrow-l" href="list.html">Back</a>  
+            <h3>Check EFM Availability</h3>
+        </div>
+
+        <div data-role="content">
+			<form id="efm_availability" class="ui-body ui-body-c ui-corner-all" data-ajax="false" accept-charset="UTF-8">
+                <fieldset>
+                    <div data-role="fieldcontain">                                      
+                       Please enter a telephone number or post code to check for EFM availability 
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="efm_cli">Telephone Number:</label>
+                        <input type="text" value="" name="efm_cli" id="efm_cli"/>
+                    </div>                                  
+                    <div data-role="fieldcontain">                                      
+                        <label for="efm_postcode">Postcode:</label>
+                        <input type="text" value="" name="efm_postcode" id="efm_postcode"/> 
+                    </div>
+                    <input type="button" data-theme="b" name="submit_efm" id="submit_efm" value="Check EFM Availability">
+                </fieldset>
+            </form>  
+        </div>
+
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <h3>Page footer</h3>
+        </div>
+    </div>
+    
+    <div data-role="page" id="efm_availability_result" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <a data-role="button" data-rel="back" data-icon="arrow-l">Back</a>  
+            <h3>EFM Availability Result</h3>
+        </div>
+
+        <div data-role="content">
+			<div id="efm_html">
+            </div>
+            <div>                
+                <a href="check_availability.html" data-role="button" data-theme="b" data-ajax="false" rel="external">Check Again</a>
+            </div>
+            <div>            	
+                <a href="check_availability_adsl.html" data-role="button" data-theme="b" data-ajax="false" rel="external">Check ADSL/FTTC Availability</a>
+            </div>
+        </div>
+
+        <div data-theme="a" data-role="footer" data-position="fixed">
+          <h3>2013 Cerberus Networks</h3>
+      	</div>
+    </div>
+    
+</body>
+</html>
